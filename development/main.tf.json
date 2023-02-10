@@ -18,6 +18,10 @@
             {
               "location": "EuropeWest",
               "name": "MyResourceGroup"
+            },
+            {
+              "location": "EuropeWest",
+              "name": "mue-res-test"
             }
           ]
         }
@@ -34,6 +38,14 @@
               "location": "EuropeWest",
               "name": "MyVirtualNetwork",
               "resource_group_name": "MyResourceGroup"
+            },
+            {
+              "address_space": [
+                "10.0.0.0/16"
+              ],
+              "location": "EuropeWest",
+              "name": "mue-net-ch",
+              "resource_group_name": "mue-res-test"
             }
           ]
         }
@@ -50,6 +62,14 @@
               "name": "MySubnet",
               "resource_group_name": "MyResourceGroup",
               "virtual_network_name": "MyVirtualNetwork"
+            },
+            {
+              "address_prefixes": [
+                "10.0.2.0/24"
+              ],
+              "name": "mue-sub-ch",
+              "resource_group_name": "mue-res-test",
+              "virtual_network_name": "mue-net-ch"
             }
           ]
         }
@@ -70,6 +90,18 @@
                   "subnet_id": "${azurerm_subnet.example.id}"
                 }
               ]
+            },
+            {
+              "name": "mue-inter-vm2",
+              "location": "EuropeWest",
+              "resource_group_name": "mue-res-test",
+              "ip_configuration": [
+                {
+                  "name": "internal",
+                  "private_ip_address_allocation": "Dynamic",
+                  "subnet_id": "${azurerm_subnet.example.id}"
+                }
+              ]
             }
           ]
         }
@@ -83,6 +115,36 @@
               "name": "MyVirtualMachine",
               "location": "EuropeWest",
               "resource_group_name": "MyResourceGroup",
+              "admin_username": "adminuser",
+              "size": "Standard_F2",
+              "admin_ssh_key": [
+                {
+                  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCVz3bmxl2xzgkOtX7o/asdfasdfasdf",
+                  "username": "adminuser"
+                }
+              ],
+              "network_interface_ids": [
+                "${azurerm_network_interface.example.id}"
+              ],
+              "os_disk": [
+                {
+                  "caching": "ReadWrite",
+                  "storage_account_type": "Standard_LRS"
+                }
+              ],
+              "source_image_reference": [
+                {
+                  "offer": "UbuntuServer",
+                  "publisher": "Canonical",
+                  "sku": "16.04-LTS",
+                  "version": "latest"
+                }
+              ]
+            },
+            {
+              "name": "mue-linux-server001",
+              "location": "EuropeWest",
+              "resource_group_name": "mue-res-test",
               "admin_username": "adminuser",
               "size": "Standard_F2",
               "admin_ssh_key": [
