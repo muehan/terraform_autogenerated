@@ -48,7 +48,7 @@
                 "10.0.2.0/24"
               ],
               "name": "mue-sub-ch",
-              "resource_group_name": "mue-res-test",
+              "resource_group_name": "${azurerm_resource_group.example.name}",
               "virtual_network_name": "mue-net-ch"
             }
           ]
@@ -62,7 +62,7 @@
             {
               "name": "mue-inter-vm2",
               "location": "westeurope",
-              "resource_group_name": "mue-res-test",
+              "resource_group_name": "${azurerm_resource_group.example.name}",
               "ip_configuration": [
                 {
                   "name": "internal",
@@ -82,7 +82,7 @@
             {
               "name": "mue-linux-server001",
               "location": "westeurope",
-              "resource_group_name": "mue-res-test",
+              "resource_group_name": "${azurerm_resource_group.example.name}",
               "admin_username": "adminuser",
               "size": "Standard_F2",
               "admin_ssh_key": [
