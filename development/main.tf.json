@@ -87,7 +87,7 @@
               "size": "Standard_F2",
               "admin_ssh_key": [
                 {
-                  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCVz3bmxl2xzgkOtX7o/6qAQ2iABJdFFPNNVk2SZ1Gc+DWwo1iCuoFjDUWfHVNDYkISEqPgC1nCKCfd4y/dBs1JNzlR37ycjJGU2pEXmQaLxSAHNnAT1Jz3oZ5+MT9hdkwleD6Q1t5QL7PoC6f0k9ZL2xi/f7aWALbVuPCdrjPAe9jgouEYaHqf/V5B8xjj5Nm7FlEiIvbME/OGWFxMXIbZJN8AIU+bjUdVRyihYj8U19IqweQDQCoK3zxeciHwkNfg599UEfi0MiqvWfukjrmx0p4bJx/72c6NgYb3lamcX+t4PwW3RJ+A0FNzDgWKKi3tPE2A1W4qwawij3Fp8Py9i+6CwSMAE/dyLHLKvNPCwIukWiAToCmHe6FDbniezjj75ME5z7yQgLVHt998HcDPVzs987vGgcszCfWiGRgFgHwuYDDTFHiaSz+t5Lmlm8xUN0rdrWxySGae4Iz71Nw0PhsEDcs82styfuy9cQhAk/t1Mkm4ITj4jFseowNpkk= tdc@workstation\\n",
+                  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCVz3bmxl2xzgkOtX7o/6qAQ2iABJdFFPNNVk2SZ1Gc+DWwo1iCuoFjDUWfHVNDYkISEqPgC1nCKCfd4y/dBs1JNzlR37ycjJGU2pEXmQaLxSAHNnAT1Jz3oZ5+MT9hdkwleD6Q1t5QL7PoC6f0k9ZL2xi/f7aWALbVuPCdrjPAe9jgouEYaHqf/V5B8xjj5Nm7FlEiIvbME/OGWFxMXIbZJN8AIU+bjUdVRyihYj8U19IqweQDQCoK3zxeciHwkNfg599UEfi0MiqvWfukjrmx0p4bJx/72c6NgYb3lamcX+t4PwW3RJ+A0FNzDgWKKi3tPE2A1W4qwawij3Fp8Py9i+6CwSMAE/dyLHLKvNPCwIukWiAToCmHe6FDbniezjj75ME5z7yQgLVHt998HcDPVzs987vGgcszCfWiGRgFgHwuYDDTFHiaSz+t5Lmlm8xUN0rdrWxySGae4Iz71Nw0PhsEDcs82styfuy9cQhAk/t1Mkm4ITj4jFseowNpkk= tdc@workstation\n",
                   "username": "adminuser"
                 }
               ],
