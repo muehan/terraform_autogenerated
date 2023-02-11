@@ -16,7 +16,7 @@
         {
           "example": [
             {
-              "location": "EuropeWest",
+              "location": "westeurope",
               "name": "mue-res-test"
             }
           ]
@@ -31,7 +31,7 @@
               "address_space": [
                 "10.0.0.0/16"
               ],
-              "location": "EuropeWest",
+              "location": "westeurope",
               "name": "mue-net-ch",
               "resource_group_name": "mue-res-test"
             }
@@ -61,7 +61,7 @@
           "example": [
             {
               "name": "mue-inter-vm2",
-              "location": "EuropeWest",
+              "location": "westeurope",
               "resource_group_name": "mue-res-test",
               "ip_configuration": [
                 {
@@ -81,7 +81,7 @@
           "example": [
             {
               "name": "mue-linux-server001",
-              "location": "EuropeWest",
+              "location": "westeurope",
               "resource_group_name": "mue-res-test",
               "admin_username": "adminuser",
               "size": "Standard_F2",
