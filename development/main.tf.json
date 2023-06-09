@@ -14,6 +14,14 @@
     {
       "azurerm_resource_group": [
         {
+          "": [
+            {
+              "location": "",
+              "name": ""
+            }
+          ]
+        },
+        {
           "example": [
             {
               "location": "westeurope",
@@ -41,6 +49,18 @@
     },
     {
       "azurerm_virtual_network": [
+        {
+          "": [
+            {
+              "address_space": [
+                ""
+              ],
+              "location": "",
+              "name": "",
+              "resource_group_name": "${azurerm_resource_group..name}"
+            }
+          ]
+        },
         {
           "example": [
             {
@@ -82,6 +102,18 @@
     {
       "azurerm_subnet": [
         {
+          "": [
+            {
+              "address_prefixes": [
+                ""
+              ],
+              "name": "",
+              "resource_group_name": "${azurerm_resource_group..name}",
+              "virtual_network_name": "${azurerm_virtual_network..name}"
+            }
+          ]
+        },
+        {
           "example": [
             {
               "address_prefixes": [
@@ -121,6 +153,22 @@
     },
     {
       "azurerm_network_interface": [
+        {
+          "": [
+            {
+              "name": "",
+              "location": "",
+              "resource_group_name": "${azurerm_resource_group..name}",
+              "ip_configuration": [
+                {
+                  "name": "",
+                  "private_ip_address_allocation": "",
+                  "subnet_id": "${azurerm_subnet..id}"
+                }
+              ]
+            }
+          ]
+        },
         {
           "example": [
             {
@@ -189,6 +237,40 @@
     },
     {
       "azurerm_linux_virtual_machine": [
+        {
+          "": [
+            {
+              "name": "",
+              "location": "",
+              "resource_group_name": "${azurerm_resource_group..name}",
+              "admin_username": "",
+              "size": "",
+              "admin_ssh_key": [
+                {
+                  "public_key": "",
+                  "username": ""
+                }
+              ],
+              "network_interface_ids": [
+                "${azurerm_network_interface..id}"
+              ],
+              "os_disk": [
+                {
+                  "caching": "",
+                  "storage_account_type": ""
+                }
+              ],
+              "source_image_reference": [
+                {
+                  "offer": "",
+                  "publisher": "",
+                  "sku": "",
+                  "version": ""
+                }
+              ]
+            }
+          ]
+        },
         {
           "example": [
             {
