@@ -25,7 +25,7 @@
           "example": [
             {
               "location": "switzerlandnorth",
-              "name": "rg-gmos-infra-prod"
+              "name": "rg-gmaa-infra-prod"
             }
           ]
         }
@@ -52,7 +52,7 @@
                 "10.0.0.0/16"
               ],
               "location": "switzerlandnorth",
-              "name": "vnet-prod2-ch",
+              "name": "vnet-prod-ch",
               "resource_group_name": "${azurerm_resource_group.example.name}"
             }
           ]
@@ -79,7 +79,7 @@
               "address_prefixes": [
                 "10.0.2.0/24"
               ],
-              "name": "sn-infra2-prod",
+              "name": "sn-infra-prod",
               "resource_group_name": "${azurerm_resource_group.example.name}",
               "virtual_network_name": "${azurerm_virtual_network.example.name}"
             }
@@ -108,7 +108,7 @@
         {
           "example": [
             {
-              "name": "ni-web003",
+              "name": "ni-web002",
               "location": "switzerlandnorth",
               "resource_group_name": "${azurerm_resource_group.example.name}",
               "ip_configuration": [
@@ -162,7 +162,7 @@
         {
           "example": [
             {
-              "name": "web003",
+              "name": "web002",
               "location": "switzerlandnorth",
               "resource_group_name": "${azurerm_resource_group.example.name}",
               "admin_username": "admin",
