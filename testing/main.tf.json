@@ -36,6 +36,18 @@
               "resource_group_name": "${azurerm_resource_group.example.name}"
             }
           ]
+        },
+        {
+          "example": [
+            {
+              "address_space": [
+                "10.2.0.0/16"
+              ],
+              "location": "switzerlandnord",
+              "name": "vn-andre-test2",
+              "resource_group_name": "${azurerm_resource_group.example.name}"
+            }
+          ]
         }
       ]
     },
@@ -48,6 +60,18 @@
                 "10.0.0.0"
               ],
               "name": "sn-andre-test",
+              "resource_group_name": "${azurerm_resource_group.example.name}",
+              "virtual_network_name": "${azurerm_virtual_network.example.name}"
+            }
+          ]
+        },
+        {
+          "example": [
+            {
+              "address_prefixes": [
+                "10.2.0.0"
+              ],
+              "name": "sn-andre-test2",
               "resource_group_name": "${azurerm_resource_group.example.name}",
               "virtual_network_name": "${azurerm_virtual_network.example.name}"
             }
@@ -72,11 +96,61 @@
               ]
             }
           ]
+        },
+        {
+          "example": [
+            {
+              "name": "int-andre-test2",
+              "location": "switzerlandnord",
+              "resource_group_name": "${azurerm_resource_group.example.name}",
+              "ip_configuration": [
+                {
+                  "name": "MyIpConfig",
+                  "private_ip_address_allocation": "Dynamic",
+                  "subnet_id": "${azurerm_subnet.example.id}"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
       "azurerm_linux_virtual_machine": [
+        {
+          "example": [
+            {
+              "name": "vm-andre-test2",
+              "location": "switzerlandnord",
+              "resource_group_name": "${azurerm_resource_group.example.name}",
+              "admin_username": "admin",
+              "size": "Standard_DS1_v2",
+              "admin_ssh_key": [
+                {
+                  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQClJcm0iisqd5jgOV+apRjuMAbfacF0VE+s1uyJuG8vQz6uLGJuWW4OEbebOqktLGzHv9nf9q4uSR1rOQTkGZER8i0vfXotE9xk1qHuVU0RLU8sCuHOHxVgNHUjKJDjxE/wBc5mDKkUI9aEk/7UtHhLT55GaDKzz+BIZX20LWw9gEp7fxRO59baTGtP6YYLntWPiPjanVCBlEpx8EPM1tefGcsyxLljFEojtD0Xv+ubbKrz1FoaZXGivnc7nkr8bliqRw30D5uC3dYEO+Z2IDNHLWEahpsTAYnDWdil9Y3Th0MDs8p1h90pj++vSEdO0uIPTX0NljsKe21gJnHTkSe1ZftXT54CaXOAaL+XWaVZ6pwk//b6PfctJwRkhhdLYODPOskAT19awC5XifCzVUfBoHR8kcSukb2QMt2c0SYfbY/G+dgcmUGgqQ95ZiJ0Cs7E9CmwIkrXhK18er0TDnckUVkjT1x4XBZo0WW6O7696ZseWNGzLwGxIWveqlPm1j/Pr8uuQ6CWff/37hiMvVRJDkxF4QztK/jrIKisvs5SS3cpGAS/W5NpeHuhZ+8iIiI6IptYLFsFxYlQNx6VIHHsxX0CDqPRNBCIt6nxIlQnvEnuYGx9ntALAPoiJujZQOeYBZV6bdppzz0I2rQCbV7s/JNGTLH64CTkjYkH9gqiVw== corp\\m0719626@CNB009XE",
+                  "username": "root"
+                }
+              ],
+              "network_interface_ids": [
+                "${azurerm_network_interface.example.id}"
+              ],
+              "os_disk": [
+                {
+                  "caching": "ReadWrite",
+                  "storage_account_type": "Premium_LRS"
+                }
+              ],
+              "source_image_reference": [
+                {
+                  "offer": "UbuntuServer",
+                  "publisher": "Canonical",
+                  "sku": "20.04-LTS",
+                  "version": "latest"
+                }
+              ]
+            }
+          ]
+        },
         {
           "example": [
             {
