@@ -16,8 +16,8 @@
         {
           "example": [
             {
-              "location": "westeurope",
-              "name": "mue-res-test2"
+              "location": "WestEurope",
+              "name": "rg-andre-test"
             }
           ]
         }
@@ -31,8 +31,8 @@
               "address_space": [
                 "10.0.0.0/16"
               ],
-              "location": "westeurope",
-              "name": "mue-net-ch2",
+              "location": "WestEurope",
+              "name": "vn-andre-test",
               "resource_group_name": "${azurerm_resource_group.example.name}"
             }
           ]
@@ -45,9 +45,9 @@
           "example": [
             {
               "address_prefixes": [
-                "10.0.2.0/24"
+                "10.0.0.0"
               ],
-              "name": "mue-sub-ch2",
+              "name": "sn-andre-test",
               "resource_group_name": "${azurerm_resource_group.example.name}",
               "virtual_network_name": "${azurerm_virtual_network.example.name}"
             }
@@ -60,12 +60,12 @@
         {
           "example": [
             {
-              "name": "mue-inter-vm3",
-              "location": "westeurope",
+              "name": "int-andre-test",
+              "location": "WestEurope",
               "resource_group_name": "${azurerm_resource_group.example.name}",
               "ip_configuration": [
                 {
-                  "name": "internal",
+                  "name": "MyIpConfig",
                   "private_ip_address_allocation": "Dynamic",
                   "subnet_id": "${azurerm_subnet.example.id}"
                 }
@@ -80,15 +80,15 @@
         {
           "example": [
             {
-              "name": "mue-linux-server002",
-              "location": "westeurope",
+              "name": "vm-andre-test",
+              "location": "WestEurope",
               "resource_group_name": "${azurerm_resource_group.example.name}",
-              "admin_username": "adminuser",
-              "size": "Standard_F2",
+              "admin_username": "admin",
+              "size": "Standard_DS1_v2",
               "admin_ssh_key": [
                 {
-                  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCVz3bmxl2xzgkOtX7o/6qAQ2iABJdFFPNNVk2SZ1Gc+DWwo1iCuoFjDUWfHVNDYkISEqPgC1nCKCfd4y/dBs1JNzlR37ycjJGU2pEXmQaLxSAHNnAT1Jz3oZ5+MT9hdkwleD6Q1t5QL7PoC6f0k9ZL2xi/f7aWALbVuPCdrjPAe9jgouEYaHqf/V5B8xjj5Nm7FlEiIvbME/OGWFxMXIbZJN8AIU+bjUdVRyihYj8U19IqweQDQCoK3zxeciHwkNfg599UEfi0MiqvWfukjrmx0p4bJx/72c6NgYb3lamcX+t4PwW3RJ+A0FNzDgWKKi3tPE2A1W4qwawij3Fp8Py9i+6CwSMAE/dyLHLKvNPCwIukWiAToCmHe6FDbniezjj75ME5z7yQgLVHt998HcDPVzs987vGgcszCfWiGRgFgHwuYDDTFHiaSz+t5Lmlm8xUN0rdrWxySGae4Iz71Nw0PhsEDcs82styfuy9cQhAk/t1Mkm4ITj4jFseowNpkk= tdc@workstation\\n",
-                  "username": "adminuser"
+                  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQClJcm0iisqd5jgOV+apRjuMAbfacF0VE+s1uyJuG8vQz6uLGJuWW4OEbebOqktLGzHv9nf9q4uSR1rOQTkGZER8i0vfXotE9xk1qHuVU0RLU8sCuHOHxVgNHUjKJDjxE/wBc5mDKkUI9aEk/7UtHhLT55GaDKzz+BIZX20LWw9gEp7fxRO59baTGtP6YYLntWPiPjanVCBlEpx8EPM1tefGcsyxLljFEojtD0Xv+ubbKrz1FoaZXGivnc7nkr8bliqRw30D5uC3dYEO+Z2IDNHLWEahpsTAYnDWdil9Y3Th0MDs8p1h90pj++vSEdO0uIPTX0NljsKe21gJnHTkSe1ZftXT54CaXOAaL+XWaVZ6pwk//b6PfctJwRkhhdLYODPOskAT19awC5XifCzVUfBoHR8kcSukb2QMt2c0SYfbY/G+dgcmUGgqQ95ZiJ0Cs7E9CmwIkrXhK18er0TDnckUVkjT1x4XBZo0WW6O7696ZseWNGzLwGxIWveqlPm1j/Pr8uuQ6CWff/37hiMvVRJDkxF4QztK/jrIKisvs5SS3cpGAS/W5NpeHuhZ+8iIiI6IptYLFsFxYlQNx6VIHHsxX0CDqPRNBCIt6nxIlQnvEnuYGx9ntALAPoiJujZQOeYBZV6bdppzz0I2rQCbV7s/JNGTLH64CTkjYkH9gqiVw== corp\\m0719626@CNB009XE",
+                  "username": "root"
                 }
               ],
               "network_interface_ids": [
@@ -97,14 +97,14 @@
               "os_disk": [
                 {
                   "caching": "ReadWrite",
-                  "storage_account_type": "Standard_LRS"
+                  "storage_account_type": "Premium_LRS"
                 }
               ],
               "source_image_reference": [
                 {
                   "offer": "UbuntuServer",
                   "publisher": "Canonical",
-                  "sku": "16.04-LTS",
+                  "sku": "20.04-LTS",
                   "version": "latest"
                 }
               ]
